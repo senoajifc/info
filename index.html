@@ -233,7 +233,7 @@ tr:hover td {
 background-color: #f9f9f9;
 }
 
-/* ✅ IKON WHATSAPP DIBUAT LANGSUNG DENGAN CSS — TANPA GAMBAR */
+/* ✅ BAGIAN INI DIPERBAIKI SAJA — SEMUA YANG LAIN TETAP SAMA */
 .whatsapp-float {
 position: fixed;
 width: 60px;
@@ -246,23 +246,21 @@ display: flex;
 align-items: center;
 justify-content: center;
 box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-z-index: 9999;
+z-index: 99999 !important; /* Dipastikan paling atas */
 text-decoration: none;
 transition: all 0.3s ease;
 font-size: 28px;
 color: #ffffff;
-font-weight: bold;
 }
 
 .whatsapp-float::after {
-content: "✆";
+content: "💬"; /* Simbol pasti muncul tanpa gambar */
 }
 
 .whatsapp-float:hover {
 background-color: #128c7e;
 transform: scale(1.1);
 box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-color: #ffffff;
 }
 
 /* Footer */
@@ -589,7 +587,7 @@ SENO AJI FC
 </div>
 </section>
 
-<!-- ✅ Tautan WA tetap berfungsi -->
+<!-- ✅ Tautan WA tetap ada, tidak berubah alamatnya -->
 <a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float" aria-label="Hubungi WhatsApp"></a>
 
 <footer>
