@@ -233,7 +233,7 @@ tr:hover td {
 background-color: #f9f9f9;
 }
 
-/* Ikon WhatsApp Mengambang - Versi Pasti Tampil */
+/* ✅ IKON WHATSAPP DIBUAT LANGSUNG DENGAN CSS — TANPA GAMBAR */
 .whatsapp-float {
 position: fixed;
 width: 60px;
@@ -249,18 +249,20 @@ box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 z-index: 9999;
 text-decoration: none;
 transition: all 0.3s ease;
+font-size: 28px;
+color: #ffffff;
+font-weight: bold;
 }
 
-.whatsapp-float img {
-width: 32px;
-height: 32px;
-object-fit: contain;
+.whatsapp-float::after {
+content: "✆";
 }
 
 .whatsapp-float:hover {
 background-color: #128c7e;
 transform: scale(1.1);
 box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+color: #ffffff;
 }
 
 /* Footer */
@@ -362,11 +364,7 @@ width: 50px;
 height: 50px;
 bottom: 20px;
 right: 20px;
-}
-
-.whatsapp-float img {
-width: 26px;
-height: 26px;
+font-size: 24px;
 }
 
 }
@@ -547,28 +545,28 @@ SENO AJI FC
 <th>Kompetisi</th>
 </tr>
 <tr>
-<td>28 Juni 2026</td>
-<td>Harapan FC</td>
-<td>2 - 1 ✅</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>21 Juni 2026</td>
-<td>Persada Madiun</td>
-<td>1 - 1 ⚖️</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>14 Juni 2026</td>
-<td>Bintang Timur</td>
-<td>3 - 0 ✅</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>07 Juni 2026</td>
-<td>Garuda Muda</td>
-<td>0 - 1 ❌</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </table>
 </section>
@@ -586,15 +584,13 @@ SENO AJI FC
 </div>
 <div class="card">
 <h3>✉ Email</h3>
-<p>-</p>
+<p>senoaji@gmail.com</p>
 </div>
 </div>
 </section>
 
-<!-- Ikon WhatsApp Mengambang - Tertanam Langsung di Kode -->
-<a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float">
-  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDAlIj4KICA8cGF0aCBkPSJNMTIuMDIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJjMCAzLjk4IDIuMDcgNy40NyA1LjI1IDkuMzVWMjFsNC4xNC0xLjE0QzE4LjA1IDE4LjA5IDIyIDE0LjA1IDIyIDEyQzIyIDYuNDggMTcuNTIgMiAxMi4wMiAyejAgbTEuNjkgMTguNjRMMTIgMTcuN2wtMi44OC43NkM2LjkxIDE2LjA3IDQgMTIuNzkgNCAxMmMwLTQuNDEgMy41OS04IDgtOCA0LjQxIDAgOCAzLjU5IDggOCAwIDIuNzktMi45MSA1LjA3LTYuMTQgNi40M20tMS45My0zLjE0Yy0uMTItLjA3LS4yNi0uMTEtLjQtLjExLS4xMSAwLS4yMS4wMy0uMzAuMTEtLjA5LjA4LS4xNy4xOS0uMjMuMzMtLjA2LjE0LS4xMi4zMS0uMTguNS0uMDYuMTktLjExLjM5LS4xNS42LS4wNC4yMS0uMDguNDItLjA4LjYzIDAgMS4wNi4yMSAyLjA2LjYyIDIuOTguNDEuOTIgMS4wMSAxLjY4IDEuNzkgMi4zOC43OC43OCAxLjY4IDEuMzkgMi43IDEuODIgLjIzLjA5LjQ2LjE2LjcwLjIxLjI0LjA1LjQ5LjA4Ljc0LjA4IDEuMDYgMCAyLjA2LS40MSAyLjk4LS45Mi45Mi0xLjY4IDEuMDEtMi4zOCAxLjc5LS43IDEuMTgtMS4zOSAxLjcxLTIuMDIgMi4wOC0uMTguMTItLjM4LjIyLS41OS4zLS4xOS4wOC0uNDAuMTMtLjYxLjEzLS4yMSAwLS40Mi0uMDUtLjYzLS4xMS0uMjEtLjA2LS40MS0uMTMtLjYtLjIxLS4xOC0uMDktLjM2LS4xOS0uNTMtLjMwLS4xNy0uMTEtLjMzLS4yNC0uNDgtLjM4LS4xNC0uMTQtLjI3LS4zMS0uMzgtLjUxLS4xMS0uMTktLjIxLS40MS0uMjgtLjY0LS4wOC0uMjMtLjEzLS40OC0uMTMtLjc0IDAtLjIxLjA0LS40Mi4xMS0uNjMuMDctLjIxLjE2LS40MS4yOC0uNTkuMTItLjE4LjI2LS4zNC40Mi0uNDguMTYtLjE0LjM0LS4yNS41My0uMzQuMTktLjA5LjM5LS4xNi42LS4yMS4yMS0uMDUuNDItLjA4LjYzLS4wOC4yMSAwIC40Mi4wMy42My4wOC4yMS4wNS40MS4xMi42LjIxLjE5LjA5LjM3LjIwLjUzLjM0LjE2LjE0LjMwLjMwLjQyLjQ4LjEyLjE4LjIxLjM4LjI4LjU5LjA3LjIxLjExLjQyLjExLjYzIDAgLjI2LS4wNS41MS0uMTMuNzQtLjA4LjIzLS4xNy40NS0uMjguNjQtLS4xMS4yLS4yNC4zNy0uMzguNTEtLjE1LjE0LS4zMS4yNy0uNDguMzgtLjE3LjExLS4zNS4yMS0uNTMuMy0uMTkuMDktLjM5LjE2LS42LjIxLS4yMSAwLS40Mi0uMDUtLjYzLS4xMS0uMjEtLjA2LS40MS0uMTMtLjYtLjIxLS4xOC0uMDktLjM2LS4xOS0uNTMtLjMwLS4xNy0uMTEtLjMzLS4yNC0uNDgtLjM4LS4xNC0uMTQtLjI3LS4zMS0uMzgtLjUxLS4xMS0uMTktLjIxLS40MS0uMjgtLjY0LS4wOC0uMjMtLjEzLS40OC0uMTMtLjc0IDAtLjIxLjA0LS40Mi4xMS0uNjMuMDctLjIxLjE2LS40MS4yOC0uNTkuMTItLjE4LjI2LS4zNC40Mi0uNDguMTYtLjE0LjM0LS4yNS41My0uMzQuMTktLS4wOS4zOS0uMTYuNi0uMjEuMjEtLjA1LjQyLS4wOC42My0uMDh6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="Hubungi WhatsApp">
-</a>
+<!-- ✅ Tautan WA tetap berfungsi -->
+<a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float" aria-label="Hubungi WhatsApp"></a>
 
 <footer>
 <h3>© 2026 Seno Aji FC</h3>
