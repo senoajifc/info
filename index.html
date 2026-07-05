@@ -164,7 +164,7 @@ margin-bottom:15px;
 color:#900;
 }
 
-/* Players */
+/* ✅ Bagian Pemain - Tampilan Desktop */
 .players{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -233,7 +233,7 @@ tr:hover td {
 background-color: #f9f9f9;
 }
 
-/* ✅ BAGIAN INI DIPERBAIKI SAJA — SEMUA YANG LAIN TETAP SAMA */
+/* ✅ Ikon WhatsApp Mengambang */
 .whatsapp-float {
 position: fixed;
 width: 60px;
@@ -246,7 +246,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-z-index: 99999 !important; /* Dipastikan paling atas */
+z-index: 99999 !important;
 text-decoration: none;
 transition: all 0.3s ease;
 font-size: 28px;
@@ -254,7 +254,7 @@ color: #ffffff;
 }
 
 .whatsapp-float::after {
-content: "💬"; /* Simbol pasti muncul tanpa gambar */
+content: "💬";
 }
 
 .whatsapp-float:hover {
@@ -280,6 +280,7 @@ footer p {
 color:#555;
 }
 
+/* ✅ PENYESUAIAN KHUSUS TAMPILAN HP */
 @media(max-width:768px){
 
 header{
@@ -311,6 +312,30 @@ font-size:18px;
 
 .hero {
 margin-top: 100px;
+}
+
+/* ✅ GRID PEMAIN MENJADI LEBIH KECIL & PADAT DI HP */
+.players{
+grid-template-columns: repeat(3, 1fr); /* 3 kolom rapi */
+gap: 12px; /* Jarak antar kotak lebih kecil */
+}
+
+.player{
+border-radius: 10px;
+}
+
+.player img{
+height: 120px; /* Tinggi foto lebih kecil */
+}
+
+.player h3{
+font-size: 13px;
+margin: 8px 0 3px;
+}
+
+.player p{
+font-size: 11px;
+padding-bottom: 10px;
 }
 
 table, thead, tbody, th, td, tr {
@@ -365,6 +390,26 @@ right: 20px;
 font-size: 24px;
 }
 
+}
+
+/* ✅ Untuk layar HP sangat kecil */
+@media(max-width:480px){
+.players{
+grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom */
+gap: 8px;
+}
+
+.player img{
+height: 100px;
+}
+
+.player h3{
+font-size: 12px;
+}
+
+.player p{
+font-size: 10px;
+}
 }
 
 </style>
