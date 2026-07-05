@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Organisasi Sepak Bola</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f9fa;
+color:#222222;
+}
+
+/* Header */
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+z-index:999;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:28px;
+font-weight:bold;
+color:#900;
+}
+
+.logo-img {
+height: 45px;
+width: auto;
+object-fit: contain;
+}
+
+nav a{
+color:#333333;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#900;
+}
+
+/* Hero */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
+url("squad1.jpeg") no-repeat center center;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+margin-top: 80px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+color:#222;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+color:#444;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+padding:15px 35px;
+background:#900;
+color:#ffffff;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+box-shadow: 0 4px 15px rgba(153, 0, 0, 0.25);
+}
+
+.btn:hover{
+background:#b00;
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(179, 0, 0, 0.3);
+}
+
+/* Section */
+section{
+padding:90px 10%;
+}
+
+.title{
+font-size:40px;
+text-align:center;
+margin-bottom:50px;
+color:#900;
+position: relative;
+}
+
+.title::after {
+content: "";
+width: 80px;
+height: 3px;
+background: #900;
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 2px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#ffffff;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+border: 1px solid #e0e0e0;
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color: #900;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#900;
+}
+
+/* ✅ Bagian Pemain - Tampilan Desktop */
+.players{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.player{
+background:#ffffff;
+border-radius:15px;
+overflow:hidden;
+text-align:center;
+border: 1px solid #e0e0e0;
+transition: .3s;
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.player:hover{
+transform:translateY(-8px);
+border-color: #900;
+box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.player img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.player h3{
+margin:15px 0 5px;
+color:#222;
+}
+
+.player p{
+padding-bottom:20px;
+color:#666;
+}
+
+/* Schedule & Result Tables */
+table{
+width:100%;
+border-collapse:collapse;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+margin-bottom: 40px;
+}
+
+th{
+background:#900;
+color:#ffffff;
+padding:15px;
+font-weight: bold;
+}
+
+td{
+padding:15px;
+background:#ffffff;
+text-align:center;
+border-bottom:1px solid #e0e0e0;
+transition: .2s;
+color:#333;
+}
+
+tr:hover td {
+background-color: #f9f9f9;
+}
+
+/* ✅ Ikon WhatsApp Mengambang */
+.whatsapp-float {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 30px;
+right: 30px;
+background-color: #25d366;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+z-index: 99999 !important;
+text-decoration: none;
+transition: all 0.3s ease;
+font-size: 28px;
+color: #ffffff;
+}
+
+.whatsapp-float::after {
+content: "💬";
+}
+
+.whatsapp-float:hover {
+background-color: #128c7e;
+transform: scale(1.1);
+box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Footer */
+footer{
+background:#ffffff;
+text-align:center;
+padding:40px;
+border-top: 1px solid #e0e0e0;
+}
+
+footer h3 {
+color:#900;
+margin-bottom: 10px;
+}
+
+footer p {
+color:#555;
+}
+
+/* ✅ PENYESUAIAN KHUSUS TAMPILAN HP */
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+padding:12px 20px;
+}
+
+.logo {
+font-size:24px;
+}
+
+.logo-img {
+height: 38px;
+}
+
+nav a{
+margin: 0 10px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero {
+margin-top: 100px;
+}
+
+/* ✅ GRID PEMAIN MENJADI LEBIH KECIL & PADAT DI HP */
+.players{
+grid-template-columns: repeat(3, 1fr); /* 3 kolom rapi */
+gap: 12px; /* Jarak antar kotak lebih kecil */
+}
+
+.player{
+border-radius: 10px;
+}
+
+.player img{
+height: 120px; /* Tinggi foto lebih kecil */
+}
+
+.player h3{
+font-size: 13px;
+margin: 8px 0 3px;
+}
+
+.player p{
+font-size: 11px;
+padding-bottom: 10px;
+}
+
+table, thead, tbody, th, td, tr {
+display: block;
+}
+
+th {
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+
+tr {
+margin-bottom: 15px;
+border-radius: 8px;
+overflow: hidden;
+}
+
+td {
+border: none;
+position: relative;
+padding-left: 50%;
+text-align: left;
+}
+
+td::before {
+position: absolute;
+top: 15px;
+left: 15px;
+width: 45%;
+padding-right: 10px;
+white-space: nowrap;
+font-weight: bold;
+color: #900;
+}
+
+#schedule td:nth-of-type(1)::before { content: "Tanggal"; }
+#schedule td:nth-of-type(2)::before { content: "Lawan"; }
+#schedule td:nth-of-type(3)::before { content: "Stadion"; }
+#schedule td:nth-of-type(4)::before { content: "Jam"; }
+
+#result td:nth-of-type(1)::before { content: "Tanggal"; }
+#result td:nth-of-type(2)::before { content: "Lawan"; }
+#result td:nth-of-type(3)::before { content: "Hasil"; }
+#result td:nth-of-type(4)::before { content: "Kompetisi"; }
+
+.whatsapp-float {
+width: 50px;
+height: 50px;
+bottom: 20px;
+right: 20px;
+font-size: 24px;
+}
+
+}
+
+/* ✅ Untuk layar HP sangat kecil */
+@media(max-width:480px){
+.players{
+grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom */
+gap: 8px;
+}
+
+.player img{
+height: 100px;
+}
+
+.player h3{
+font-size: 12px;
+}
+
+.player p{
+font-size: 10px;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logosenoaji.png" alt="Logo Seno Aji FC" class="logo-img">
+SENO AJI FC
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#team">Pemain</a>
+<a href="#schedule">Jadwal & Hasil</a>
+<a href="#contact">Kontak</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>SENO AJI FC</h1>
+<p>Membangun Prestasi • Menjunjung Sportivitas • Bersatu Meraih Juara</p>
+<a href="#about" class="btn">Selengkapnya</a>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">Tentang Kami</h2>
+<div class="cards">
+<div class="card">
+<h3>Visi</h3>
+<p>Menjadi organisasi sepak bola yang profesional dan berprestasi.</p>
+</div>
+<div class="card">
+<h3>Misi</h3>
+<p>Membina pemain muda berbakat dan menjunjung tinggi fair play.</p>
+</div>
+<div class="card">
+<h3>Target</h3>
+<p>Menjadi juara pada setiap kompetisi tingkat daerah maupun nasional.</p>
+</div>
+</div>
+</section>
+
+<section id="team">
+<h2 class="title">Pemain Seno Aji FC</h2>
+<div class="players">
+<div class="player">
+<img src="1.png">
+<h3>Wahyu N A</h3>
+<p>Goal Keeper #23</p>
+</div>
+<div class="player">
+<img src="2.png">
+<h3>Ryan</h3>
+<p>Pemain #9</p>
+</div>
+<div class="player">
+<img src="3.png">
+<h3>Aldhy</h3>
+<p>Pemain #92</p>
+</div>
+<div class="player">
+<img src="4.png">
+<h3>Aan</h3>
+<p>Pemain #5</p>
+</div>
+<div class="player">
+<img src="5.png">
+<h3>Akbar</h3>
+<p>Pemain #69</p>
+</div>
+<div class="player">
+<img src="6.png">
+<h3>Davinta</h3>
+<p>Pemain #5</p>
+</div>
+<div class="player">
+<img src="7.png">
+<h3>Fahri</h3>
+<p>Pemain #2</p>
+</div>
+<div class="player">
+<img src="8.png">
+<h3>Dian</h3>
+<p>Pemain #17</p>
+</div>
+<div class="player">
+<img src="9.png">
+<h3>Munir</h3>
+<p>Pemain #18</p>
+</div>
+<div class="player">
+<img src="10.png">
+<h3>Nico</h3>
+<p>Goal Keeper #12</p>
+</div>
+<div class="player">
+<img src="11.png">
+<h3>Feri</h3>
+<p>Pemain #14</p>
+</div>
+<div class="player">
+<img src="12.png">
+<h3>Ayah Roni</h3>
+<p>Pemain #20</p>
+</div>
+<div class="player">
+<img src="13.png">
+<h3>Ping</h3>
+<p>Pemain #77</p>
+</div>
+<div class="player">
+<img src="14.png">
+<h3>Muzamil</h3>
+<p>Pemain #13</p>
+</div>
+<div class="player">
+<img src="15.png">
+<h3>Patok</h3>
+<p>Pemain #34</p>
+</div>
+<div class="player">
+<img src="16.png">
+<h3>Nur Dwi</h3>
+<p>Pemain #19</p>
+</div>
+<div class="player">
+<img src="17.png">
+<h3>Oxix</h3>
+<p>Pemain #59</p>
+</div>
+</div>
+</section>
+
+<section id="schedule">
+<h2 class="title">Jadwal Pertandingan</h2>
+<table>
+<tr>
+<th>Tanggal</th>
+<th>Lawan</th>
+<th>Stadion</th>
+<th>Jam</th>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</table>
+
+<h2 class="title" style="font-size:32px; margin-top:40px;">Hasil Pertandingan</h2>
+<table id="result">
+<tr>
+<th>Tanggal</th>
+<th>Lawan</th>
+<th>Hasil</th>
+<th>Kompetisi</th>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</table>
+</section>
+
+<section id="contact">
+<h2 class="title">Kontak</h2>
+<div class="cards">
+<div class="card">
+<h3>📍 Alamat</h3>
+<p>Jl. Nuri Timur Rt05 Rw02 Gelung Paron Ngawi</p>
+</div>
+<div class="card">
+<h3>📞 Telepon / WhatsApp</h3>
+<p>0853-3059-4030</p>
+</div>
+<div class="card">
+<h3>✉ Email</h3>
+<p>senoaji@gmail.com</p>
+</div>
+</div>
+</section>
+
+<!-- ✅ Tautan WA tetap ada, tidak berubah alamatnya -->
+<a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float" aria-label="Hubungi WhatsApp"></a>
+
+<footer>
+<h3>© 2026 Seno Aji FC</h3>
+<p>Kabupaten Ngawi, Jawa Timur</p>
+</footer>
+
+</body>
+</html>
