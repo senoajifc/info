@@ -7,6 +7,8 @@
 <title>Organisasi Sepak Bola</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Tambahkan ikon Font Awesome untuk WhatsApp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -233,6 +235,34 @@ tr:hover td {
 background-color: #f9f9f9;
 }
 
+/* Ikon WhatsApp Mengambang */
+.whatsapp-float {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 30px;
+right: 30px;
+background-color: #25d366;
+color: #FFF;
+border-radius: 50%;
+text-align: center;
+font-size: 30px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+z-index: 9999;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+background-color: #128c7e;
+transform: scale(1.1);
+box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+color: #fff;
+}
+
 /* Footer */
 footer{
 background:#ffffff;
@@ -329,6 +359,15 @@ color: #900;
 #result td:nth-of-type(2)::before { content: "Lawan"; }
 #result td:nth-of-type(3)::before { content: "Hasil"; }
 #result td:nth-of-type(4)::before { content: "Kompetisi"; }
+
+/* Ukuran ikon WA di HP */
+.whatsapp-float {
+width: 50px;
+height: 50px;
+font-size: 26px;
+bottom: 20px;
+right: 20px;
+}
 
 }
 
@@ -499,7 +538,7 @@ SENO AJI FC
 </tr>
 </table>
 
-<!-- Tabel Hasil Pertandingan ditambahkan di sini -->
+<!-- Tabel Hasil Pertandingan -->
 <h2 class="title" style="font-size:32px; margin-top:40px;">Hasil Pertandingan</h2>
 <table id="result">
 <tr>
@@ -509,28 +548,28 @@ SENO AJI FC
 <th>Kompetisi</th>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>28 Juni 2026</td>
+<td>Harapan FC</td>
+<td>2 - 1 ✅</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>21 Juni 2026</td>
+<td>Persada Madiun</td>
+<td>1 - 1 ⚖️</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>14 Juni 2026</td>
+<td>Bintang Timur</td>
+<td>3 - 0 ✅</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>07 Juni 2026</td>
+<td>Garuda Muda</td>
+<td>0 - 1 ❌</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 </table>
 </section>
@@ -543,15 +582,20 @@ SENO AJI FC
 <p>Jl. Nuri Timur Rt05 Rw02 Gelung Paron Ngawi</p>
 </div>
 <div class="card">
-<h3>📞 Telepon</h3>
+<h3>📞 Telepon / WhatsApp</h3>
 <p>0853-3059-4030</p>
 </div>
 <div class="card">
 <h3>✉ Email</h3>
-<p>senoaji.fc@gmail.com</p>
+<p>-</p>
 </div>
 </div>
 </section>
+
+<!-- Ikon WhatsApp Mengambang -->
+<a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <footer>
 <h3>© 2026 Seno Aji FC</h3>
