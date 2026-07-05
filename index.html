@@ -19,8 +19,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f8f9fa; /* Latar belakang terang */
-color:#222222; /* Warna teks gelap agar terbaca jelas */
+background:#f8f9fa;
+color:#222222;
 }
 
 /* Header */
@@ -28,14 +28,14 @@ header{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(255,255,255,.9); /* Latar header terang */
+background:rgba(255,255,255,.9);
 backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 60px;
 z-index:999;
-box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Bayangan halus */
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo{
@@ -44,7 +44,7 @@ align-items:center;
 gap:10px;
 font-size:28px;
 font-weight:bold;
-color:#900; /* Merah maroon */
+color:#900;
 }
 
 .logo-img {
@@ -78,7 +78,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-margin-top: 80px; /* Jarak dari header */
+margin-top: 80px;
 }
 
 .hero h1{
@@ -210,7 +210,7 @@ border-collapse:collapse;
 overflow: hidden;
 border-radius: 10px;
 box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-margin-bottom: 40px; /* Jarak antar tabel */
+margin-bottom: 40px;
 }
 
 th{
@@ -313,7 +313,6 @@ font-size:18px;
 margin-top: 100px;
 }
 
-/* Responsif tabel di HP */
 table, thead, tbody, th, td, tr {
 display: block;
 }
@@ -348,19 +347,16 @@ font-weight: bold;
 color: #900;
 }
 
-/* Label untuk tabel jadwal */
 #schedule td:nth-of-type(1)::before { content: "Tanggal"; }
 #schedule td:nth-of-type(2)::before { content: "Lawan"; }
 #schedule td:nth-of-type(3)::before { content: "Stadion"; }
 #schedule td:nth-of-type(4)::before { content: "Jam"; }
 
-/* Label untuk tabel hasil */
 #result td:nth-of-type(1)::before { content: "Tanggal"; }
 #result td:nth-of-type(2)::before { content: "Lawan"; }
 #result td:nth-of-type(3)::before { content: "Hasil"; }
 #result td:nth-of-type(4)::before { content: "Kompetisi"; }
 
-/* Ukuran ikon WA di HP */
 .whatsapp-float {
 width: 50px;
 height: 50px;
@@ -542,7 +538,6 @@ SENO AJI FC
 </tr>
 </table>
 
-<!-- Tabel Hasil Pertandingan -->
 <h2 class="title" style="font-size:32px; margin-top:40px;">Hasil Pertandingan</h2>
 <table id="result">
 <tr>
@@ -552,28 +547,28 @@ SENO AJI FC
 <th>Kompetisi</th>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>28 Juni 2026</td>
+<td>Harapan FC</td>
+<td>2 - 1 ✅</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>21 Juni 2026</td>
+<td>Persada Madiun</td>
+<td>1 - 1 ⚖️</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>14 Juni 2026</td>
+<td>Bintang Timur</td>
+<td>3 - 0 ✅</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>07 Juni 2026</td>
+<td>Garuda Muda</td>
+<td>0 - 1 ❌</td>
+<td>Liga Daerah Ngawi</td>
 </tr>
 </table>
 </section>
@@ -596,9 +591,9 @@ SENO AJI FC
 </div>
 </section>
 
-<!-- Ikon WhatsApp Mengambang - Tanpa Font Awesome -->
+<!-- Ikon WhatsApp Mengambang - Tertanam Langsung di Kode -->
 <a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Hubungi WhatsApp">
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHN0eWxlPSJ3aWR0aDogMTAwJTsgaGVpZ2h0OiAxMDAlIj4KICA8cGF0aCBkPSJNMTIuMDIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJjMCAzLjk4IDIuMDcgNy40NyA1LjI1IDkuMzVWMjFsNC4xNC0xLjE0QzE4LjA1IDE4LjA5IDIyIDE0LjA1IDIyIDEyQzIyIDYuNDggMTcuNTIgMiAxMi4wMiAyejAgbTEuNjkgMTguNjRMMTIgMTcuN2wtMi44OC43NkM2LjkxIDE2LjA3IDQgMTIuNzkgNCAxMmMwLTQuNDEgMy41OS04IDgtOCA0LjQxIDAgOCAzLjU5IDggOCAwIDIuNzktMi45MSA1LjA3LTYuMTQgNi40M20tMS45My0zLjE0Yy0uMTItLjA3LS4yNi0uMTEtLjQtLjExLS4xMSAwLS4yMS4wMy0uMzAuMTEtLjA5LjA4LS4xNy4xOS0uMjMuMzMtLjA2LjE0LS4xMi4zMS0uMTguNS0uMDYuMTktLjExLjM5LS4xNS42LS4wNC4yMS0uMDguNDItLjA4LjYzIDAgMS4wNi4yMSAyLjA2LjYyIDIuOTguNDEuOTIgMS4wMSAxLjY4IDEuNzkgMi4zOC43OC43OCAxLjY4IDEuMzkgMi43IDEuODIgLjIzLjA5LjQ2LjE2LjcwLjIxLjI0LjA1LjQ5LjA4Ljc0LjA4IDEuMDYgMCAyLjA2LS40MSAyLjk4LS45Mi45Mi0xLjY4IDEuMDEtMi4zOCAxLjc5LS43IDEuMTgtMS4zOSAxLjcxLTIuMDIgMi4wOC0uMTguMTItLjM4LjIyLS41OS4zLS4xOS4wOC0uNDAuMTMtLjYxLjEzLS4yMSAwLS40Mi0uMDUtLjYzLS4xMS0uMjEtLjA2LS40MS0uMTMtLjYtLjIxLS4xOC0uMDktLjM2LS4xOS0uNTMtLjMwLS4xNy0uMTEtLjMzLS4yNC0uNDgtLjM4LS4xNC0uMTQtLjI3LS4zMS0uMzgtLjUxLS4xMS0uMTktLjIxLS40MS0uMjgtLjY0LS4wOC0uMjMtLjEzLS40OC0uMTMtLjc0IDAtLjIxLjA0LS40Mi4xMS0uNjMuMDctLjIxLjE2LS40MS4yOC0uNTkuMTItLjE4LjI2LS4zNC40Mi0uNDguMTYtLjE0LjM0LS4yNS41My0uMzQuMTktLjA5LjM5LS4xNi42LS4yMS4yMS0uMDUuNDItLjA4LjYzLS4wOC4yMSAwIC40Mi4wMy42My4wOC4yMS4wNS40MS4xMi42LjIxLjE5LjA5LjM3LjIwLjUzLjM0LjE2LjE0LjMwLjMwLjQyLjQ4LjEyLjE4LjIxLjM4LjI4LjU5LjA3LjIxLjExLjQyLjExLjYzIDAgLjI2LS4wNS41MS0uMTMuNzQtLjA4LjIzLS4xNy40NS0uMjguNjQtLS4xMS4yLS4yNC4zNy0uMzguNTEtLjE1LjE0LS4zMS4yNy0uNDguMzgtLjE3LjExLS4zNS4yMS0uNTMuMy0uMTkuMDktLjM5LjE2LS42LjIxLS4yMSAwLS40Mi0uMDUtLjYzLS4xMS0uMjEtLjA2LS40MS0uMTMtLjYtLjIxLS4xOC0uMDktLjM2LS4xOS0uNTMtLjMwLS4xNy0uMTEtLjMzLS4yNC0uNDgtLjM4LS4xNC0uMTQtLjI3LS4zMS0uMzgtLjUxLS4xMS0uMTktLjIxLS40MS0uMjgtLjY0LS4wOC0uMjMtLjEzLS40OC0uMTMtLjc0IDAtLjIxLjA0LS40Mi4xMS0uNjMuMDctLjIxLjE2LS40MS4yOC0uNTkuMTItLjE4LjI2LS4zNC40Mi0uNDguMTYtLjE0LjM0LS4yNS41My0uMzQuMTktLS4wOS4zOS0uMTYuNi0uMjEuMjEtLjA1LjQyLS4wOC42My0uMDh6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" alt="Hubungi WhatsApp">
 </a>
 
 <footer>
