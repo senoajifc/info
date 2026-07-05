@@ -7,8 +7,6 @@
 <title>Organisasi Sepak Bola</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<!-- Tambahkan ikon Font Awesome untuk WhatsApp -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 
@@ -235,7 +233,7 @@ tr:hover td {
 background-color: #f9f9f9;
 }
 
-/* Ikon WhatsApp Mengambang */
+/* Ikon WhatsApp Mengambang - Versi Pasti Tampil */
 .whatsapp-float {
 position: fixed;
 width: 60px;
@@ -243,24 +241,26 @@ height: 60px;
 bottom: 30px;
 right: 30px;
 background-color: #25d366;
-color: #FFF;
 border-radius: 50%;
-text-align: center;
-font-size: 30px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-z-index: 9999;
 display: flex;
 align-items: center;
 justify-content: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+z-index: 9999;
 text-decoration: none;
 transition: all 0.3s ease;
+}
+
+.whatsapp-float img {
+width: 32px;
+height: 32px;
+object-fit: contain;
 }
 
 .whatsapp-float:hover {
 background-color: #128c7e;
 transform: scale(1.1);
 box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-color: #fff;
 }
 
 /* Footer */
@@ -364,9 +364,13 @@ color: #900;
 .whatsapp-float {
 width: 50px;
 height: 50px;
-font-size: 26px;
 bottom: 20px;
 right: 20px;
+}
+
+.whatsapp-float img {
+width: 26px;
+height: 26px;
 }
 
 }
@@ -548,28 +552,28 @@ SENO AJI FC
 <th>Kompetisi</th>
 </tr>
 <tr>
-<td>28 Juni 2026</td>
-<td>Harapan FC</td>
-<td>2 - 1 ✅</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>21 Juni 2026</td>
-<td>Persada Madiun</td>
-<td>1 - 1 ⚖️</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>14 Juni 2026</td>
-<td>Bintang Timur</td>
-<td>3 - 0 ✅</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 <tr>
-<td>07 Juni 2026</td>
-<td>Garuda Muda</td>
-<td>0 - 1 ❌</td>
-<td>Liga Daerah Ngawi</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
 </tr>
 </table>
 </section>
@@ -592,9 +596,9 @@ SENO AJI FC
 </div>
 </section>
 
-<!-- Ikon WhatsApp Mengambang -->
+<!-- Ikon WhatsApp Mengambang - Tanpa Font Awesome -->
 <a href="https://wa.me/6285330594030" target="_blank" class="whatsapp-float">
-  <i class="fa-brands fa-whatsapp"></i>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="Hubungi WhatsApp">
 </a>
 
 <footer>
